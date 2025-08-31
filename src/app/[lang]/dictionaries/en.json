@@ -19,5 +19,9 @@
     "hiking01": "Image from when I went hiking",
     "trip": "Image from when I went Thailand",
     "squat": "Image from when I did squats"
+  },
+  "language": {
+    "english": "English",
+    "japanese": "Japanese"
   }
 }

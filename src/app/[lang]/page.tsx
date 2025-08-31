@@ -9,7 +9,7 @@ export default async function Home({
   const { lang } = await params;
   const dict = await getDictionary(lang);
   return (
-    <div className="max-w-2xl mx-auto py-10">
+    <div>
       <div className="mb-10">
         <div className="text-6xl mb-1 font-bold">{dict.welcome}</div>
         <div className="text-2xl font-bold ml-4">{dict.name}</div>
