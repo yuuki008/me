@@ -1,3 +1,57 @@
+import Image from "next/image";
+
 export default function Home() {
-  return <div></div>;
+  return (
+    <div className="max-w-2xl mx-auto py-10">
+      <div className="mb-10">
+        <div className="text-6xl mb-1 font-bold">Welcome</div>
+        <div className="text-2xl font-bold ml-4">I&apos;m Yuki Nomura</div>
+      </div>
+
+      <div className="px-4 space-y-6">
+        <div>
+          Hello! Nice to meet you. I&apos;m Nomu, a software engineer based in
+          Fukuoka.
+          <br />
+          Through this site, I hope to gradually share a bit about who I am,
+          covering everything from my work to my hobbies.
+        </div>
+
+        <div>
+          <div className="text-2xl font-bold mb-2">About Me</div>
+          <div>
+            I&apos;m originally from Mihara City in Hiroshima Prefecture. As a
+            child, I was energetic and preferred physical activities over
+            studying. At age 8, influenced by my father, I started playing
+            baseball and dedicated my entire student life to pursuing my dream
+            of becoming a professional baseball player.
+            <div className="my-2">
+              <Image
+                src="/childhood02.jpeg"
+                alt="childhood"
+                className="w-full h-auto"
+                width={10000}
+                height={10000}
+              />
+              <div className="text-sm text-gray-600 italic text-center mt-1">
+                Image from when I went beach
+              </div>
+            </div>
+            <br />
+            The turning point came in June 2020, during my third year of
+            university.
+            <br />
+            Driven by the desire to &quot;develop a skill that would be uniquely
+            mine,&quot; I began learning programming.I studied intensively on my
+            own for about six months, then started my career as an engineer
+            through internships. What captivated me about programming was the
+            tangible sense that my skills improved in direct proportion to my
+            effort. While my pace of growth wasn&apos;t particularly fast, I
+            became absorbed in the gradual process of expanding what I could
+            accomplish, and I found myself completely immersed in programming.
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
