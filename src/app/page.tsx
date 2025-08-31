@@ -71,6 +71,41 @@ export default function Home() {
             accomplish, and I found myself completely immersed in programming.
           </div>
         </div>
+
+        <div>
+          <div className="text-2xl font-bold mb-2">My Hobbies</div>
+          <div>
+            I love physical activities and personal development projects.
+            <br />
+            <br />
+            I&apos;m passionate about hiking, weight training, and running. I
+            started weight training at age 16, and it has become an integral
+            part of my lifestyle.
+            <br />
+            <br />
+            For personal development, I create apps that I would actually use
+            myself. I&apos;ve developed{" "}
+            <a
+              href="https://diary.yuuki008.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 underline"
+            >
+              solo-diary
+            </a>{" "}
+            and{" "}
+            <a
+              href="https://brain.yuuki008.dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 underline"
+            >
+              second-brain
+            </a>
+            . Currently, I frequently use React, shadcn/ui, and Supabase for
+            development.
+          </div>
+        </div>
       </div>
     </div>
   );
