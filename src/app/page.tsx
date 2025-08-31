@@ -1,4 +1,4 @@
-import Image from "next/image";
+import CustomCarousel from "@/components/custom-carousel";
 
 export default function Home() {
   return (
@@ -45,19 +45,19 @@ export default function Home() {
             studying. At age 8, influenced by my father, I started playing
             baseball and dedicated my entire student life to pursuing my dream
             of becoming a professional baseball player.
-            <div className="my-4">
-              <Image
-                src="/childhood02.jpeg"
-                alt="childhood"
-                className="w-full h-auto"
-                width={10000}
-                height={10000}
-              />
-              <div className="text-sm text-gray-600 italic text-center mt-1">
-                Image from when I went beach
-              </div>
-            </div>
-            <br />
+            <CustomCarousel
+              className="mt-4 mb-8"
+              images={[
+                {
+                  url: "/childhood01.jpeg",
+                  caption: "Image from when I went beach",
+                },
+                {
+                  url: "/childhood02.jpeg",
+                  caption: "Image from when I went skiing",
+                },
+              ]}
+            />
             The turning point came in June 2020, during my third year of
             university.
             <br />
@@ -76,7 +76,23 @@ export default function Home() {
           <div className="text-2xl font-bold mb-2">My Hobbies</div>
           <div>
             I love physical activities and personal development projects.
-            <br />
+            <CustomCarousel
+              className="my-4"
+              images={[
+                {
+                  url: "/hiking01.jpeg",
+                  caption: "Image from when I went hiking",
+                },
+                {
+                  url: "/trip.jpeg",
+                  caption: "Image from when I went Thailand",
+                },
+                {
+                  url: "/squat.jpeg",
+                  caption: "Image from when I did squats",
+                },
+              ]}
+            />
             <br />
             I&apos;m passionate about hiking, weight training, and running. I
             started weight training at age 16, and it has become an integral
