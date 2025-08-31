@@ -19,7 +19,7 @@ export default function Home() {
           <br />
           <div className="flex gap-4">
             <a
-              href="https://x.com/your_username"
+              href="https://x.com/nomu487495"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-500 hover:text-blue-700 underline"
