@@ -15,6 +15,26 @@ export default function Home() {
           <br />
           Through this site, I hope to gradually share a bit about who I am,
           covering everything from my work to my hobbies.
+          <br />
+          <br />
+          <div className="flex gap-4">
+            <a
+              href="https://x.com/your_username"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 underline"
+            >
+              X (Twitter)
+            </a>
+            <a
+              href="https://github.com/yuuki008"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-700 underline"
+            >
+              GitHub
+            </a>
+          </div>
         </div>
 
         <div>
@@ -25,7 +45,7 @@ export default function Home() {
             studying. At age 8, influenced by my father, I started playing
             baseball and dedicated my entire student life to pursuing my dream
             of becoming a professional baseball player.
-            <div className="my-2">
+            <div className="my-4">
               <Image
                 src="/childhood02.jpeg"
                 alt="childhood"
