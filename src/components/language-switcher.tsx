@@ -28,8 +28,8 @@ export default function LanguageSwitcher({
   };
 
   const languages = [
-    { code: "en", label: "English", flag: "🇺🇸" },
-    { code: "ja", label: "Japanese", flag: "🇯🇵" },
+    { code: "en", label: "en", flag: "🇺🇸" },
+    { code: "ja", label: "ja", flag: "🇯🇵" },
   ];
 
   const currentLanguage = languages.find((lang) => lang.code === currentLang);
