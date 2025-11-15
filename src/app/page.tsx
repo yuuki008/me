@@ -14,11 +14,17 @@ const images = [
   "/top/03.jpeg",
   "/top/04.jpeg",
   "/top/05.jpeg",
-  "/top/06.JPG",
   "/top/07.JPG",
   "/top/08.JPG",
   "/top/09.PNG",
   "/top/10.JPG",
+  "/top/12.JPG",
+  "/top/13.JPG",
+  "/top/14.JPG",
+  "/top/15.JPG",
+  "/top/16.JPG",
+  "/top/17.JPG",
+  "/top/18.JPG",
 ];
 
 export default function Page() {
