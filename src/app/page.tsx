@@ -7,8 +7,8 @@ export default function Page() {
     <div className="flex items-center justify-center h-screen">
       <div className="max-w-2xl mx-auto px-4 flex sm:gap-8 gap-4 sm:flex-row flex-col">
         <Image
-          className="rounded-full border-4 w-[120px] h-[120px]"
-          src="/profile.jpeg"
+          className="rounded-full w-[120px] h-[120px] object-cover border-4"
+          src="/top/02.jpeg"
           alt="profile"
           width={1000}
           height={1000}
