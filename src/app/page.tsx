@@ -30,13 +30,13 @@ const images = [
 export default function Page() {
   return (
     <div className="py-10">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl px-4 mx-auto">
         <div className="text-5xl font-bold">能村 優希</div>
 
         <div className="mt-10">
           福岡でデータ基盤と Web サービスの開発・運用をしているエンジニアです。
           <br />
-          仕事以外では、ランニングや登山、トレーニング、読書をして過ごすことが多いです。シンプルで無駄のないものが好きで、そういうものを追求していたいなと思っています。
+          仕事以外では、ランニングや登山、トレーニング、読書をして過ごすことが多いです。シンプルで無駄のないものが大好きで、そういうものを追求していたいなと思っています。
           <br />
           <br />
           最近ブログを書き始めました。
@@ -62,7 +62,7 @@ export default function Page() {
         >
           <CarouselContent>
             {images.map((image, index) => (
-              <CarouselItem className="basis-1/3 max-w-[300px]" key={index}>
+              <CarouselItem className="basis-[75%] max-w-[300px]" key={index}>
                 <Image
                   src={image}
                   alt="top"
