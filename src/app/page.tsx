@@ -12,7 +12,6 @@ const images = [
   "/top/01.jpeg",
   "/top/02.jpeg",
   "/top/03.jpeg",
-  "/top/04.jpeg",
   "/top/05.jpeg",
   "/top/07.JPG",
   "/top/08.JPG",
@@ -30,10 +29,10 @@ const images = [
 export default function Page() {
   return (
     <div className="py-10">
-      <div className="max-w-2xl px-4 mx-auto">
+      <div className="max-w-2xl px-2 mx-auto">
         <div className="text-5xl font-bold">能村 優希</div>
 
-        <div className="mt-10">
+        <div className="mt-10 sm:text-base text-sm">
           福岡でデータ基盤と Web サービスの開発・運用をしているエンジニアです。
           <br />
           仕事以外では、ランニングや登山、トレーニング、読書をして過ごすことが多いです。シンプルで無駄のないものが大好きで、そういうものを追求していたいなと思っています。
