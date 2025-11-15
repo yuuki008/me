@@ -15,13 +15,23 @@ export default function BlogPage() {
             className="border p-2 rounded-xl max-h-[500px] overflow-hidden space-y-2"
           >
             <div className="flex-1 p-2">
-              <div className="mb-2">
+              <div className="mb-4">
                 <time className="text-gray-600 text-sm">{post.date}</time>
                 <Link href={`/blog/${post.slug}`}>
                   <h2 className="text-xl font-bold hover:text-blue-600 tracking-wide">
                     {post.title}
                   </h2>
                 </Link>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {post.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-gray-600 text-xs bg-gray-100 px-2 py-1 rounded-full"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
               <MDXRemote source={post.content} />
             </div>

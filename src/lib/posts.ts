@@ -9,6 +9,7 @@ export interface Post {
   title: string;
   date: string;
   description: string;
+  tags: string[];
   content: string;
 }
 
@@ -26,6 +27,7 @@ export function getAllPosts(): Post[] {
         slug,
         title: data.title,
         date: data.date,
+        tags: data.tags,
         description: data.description,
         content,
       };
