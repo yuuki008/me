@@ -12,15 +12,16 @@ export default async function BlogPage() {
         {posts.map((post) => (
           <article
             key={post.slug}
-            className="border p-2 rounded-xl max-h-[500px] overflow-hidden space-y-2"
+            className="border p-2 rounded-xl overflow-hidden space-y-2"
           >
             {post.thumbnail && (
-              <div className="w-full h-48 relative overflow-hidden rounded-lg">
+              <div className="relative overflow-hidden rounded-lg">
                 <Image
+                  width={1000}
+                  height={1000}
                   src={post.thumbnail}
                   alt={post.title}
-                  fill
-                  className="object-cover"
+                  className="object-cover max-h-96 w-full"
                 />
               </div>
             )}
