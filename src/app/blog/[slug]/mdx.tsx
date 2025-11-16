@@ -63,12 +63,12 @@ function slugify(str?: string) {
     ?.replace(/\-\-+/g, "-"); // Replace multiple - with single -
 }
 
-function createHeading(level: number) {
+function createHeading(level: number, className: string) {
   const Heading = ({ children }: { children: string }) => {
     const slug = slugify(children);
     return React.createElement(
       `h${level}`,
-      { id: slug },
+      { id: slug, className },
       [
         React.createElement("a", {
           href: `#${slug}`,
@@ -86,12 +86,12 @@ function createHeading(level: number) {
 }
 
 const components = {
-  h1: createHeading(1),
-  h2: createHeading(2),
-  h3: createHeading(3),
-  h4: createHeading(4),
-  h5: createHeading(5),
-  h6: createHeading(6),
+  h1: createHeading(1, "text-4xl font-semibold tracking-tighter"),
+  h2: createHeading(2, "text-3xl font-semibold tracking-tighter"),
+  h3: createHeading(3, "text-2xl font-semibold tracking-tighter"),
+  h4: createHeading(4, "text-xl font-semibold tracking-tighter"),
+  h5: createHeading(5, "text-lg font-semibold tracking-tighter"),
+  h6: createHeading(6, "text-base font-semibold tracking-tighter"),
   Image: RoundedImage,
   a: CustomLink,
   code: Code,
