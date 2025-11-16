@@ -10,15 +10,13 @@ export default async function Blog({ params }: { params: { slug: string } }) {
   }
 
   return (
-    <section className="max-w-2xl mx-auto px-4 py-8">
-      <h1 className="title font-semibold text-2xl tracking-tighter">
+    <section className="max-w-xl mx-auto px-4 py-8">
+      <h1 className="font-bold text-5xl text-center tracking-tighter">
         {post.title}
       </h1>
-      <div className="flex justify-between items-center mt-2 mb-8 text-sm">
-        <p className="text-sm text-neutral-600 dark:text-neutral-400">
-          {post.date}
-        </p>
-      </div>
+      <time className="text-secondary-foreground flex justify-center text-neutral-500 dark:text-neutral-400 mb-8 mt-2">
+        {post.date}
+      </time>
       <article className="prose">
         <CustomMDX source={post.content} />
       </article>
