@@ -1,9 +1,15 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "./mdx";
 import { getPostBySlug } from "../utils";
+import Image from "next/image";
 
-export default async function Blog({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug);
+export default async function Blog({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const post = await getPostBySlug(slug);
 
   if (!post) {
     notFound();
@@ -14,11 +20,21 @@ export default async function Blog({ params }: { params: { slug: string } }) {
       <h1 className="font-bold text-5xl text-center tracking-tighter">
         {post.title}
       </h1>
-      <time className="text-secondary-foreground flex justify-center text-neutral-500 dark:text-neutral-400 mb-8 mt-2">
+      <time className="text-secondary-foreground flex justify-center text-neutral-500 dark:text-neutral-400 mt-2">
         {post.date}
       </time>
-      <article className="prose">
-        <CustomMDX source={post.content} />
+      {post.thumbnail && (
+        <Image
+          src={post.thumbnail}
+          alt={post.title}
+          width={1000}
+          height={1000}
+          className="max-h-96 w-full object-cover mt-6"
+        />
+      )}
+
+      <article className="prose mt-8">
+        <CustomMDX source={post.content} slug={post.slug} />
       </article>
     </section>
   );

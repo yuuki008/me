@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts } from "@/app/blog/utils";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Button } from "@/components/ui/button";
@@ -14,6 +15,16 @@ export default async function BlogPage() {
             key={post.slug}
             className="border p-2 rounded-xl max-h-[500px] overflow-hidden space-y-2"
           >
+            {post.thumbnail && (
+              <div className="w-full h-48 relative overflow-hidden rounded-lg">
+                <Image
+                  src={post.thumbnail}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
             <div className="flex-1 p-2">
               <div className="mb-4">
                 <time className="text-secondary-foreground text-sm">
@@ -35,7 +46,9 @@ export default async function BlogPage() {
                   ))}
                 </div>
               </div>
-              <MDXRemote source={post.content} />
+              <p className="text-sm text-gray-600 line-clamp-3">
+                {post.description}
+              </p>
             </div>
 
             <Button variant="secondary" className="w-full">

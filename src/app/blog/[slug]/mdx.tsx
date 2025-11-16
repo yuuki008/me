@@ -44,8 +44,15 @@ function CustomLink(props: { href: string; children: React.ReactNode }) {
   return <a target="_blank" rel="noopener noreferrer" {...props} />;
 }
 
-function RoundedImage(props: ImageProps) {
-  return <Image className="rounded-lg" {...props} alt={props.alt} />;
+function RoundedImage(props: ImageProps & { slug?: string }) {
+  let src = props.src;
+
+  // 相対パスの場合、投稿フォルダ内の画像として処理
+  if (typeof src === "string" && src.startsWith("./") && props.slug) {
+    src = `/blog/posts/${props.slug}/${src.replace("./", "")}`;
+  }
+
+  return <Image className="rounded-lg" {...props} src={src} alt={props.alt} />;
 }
 
 function Code({ children, ...props }: { children: string }) {
@@ -98,11 +105,20 @@ const components = {
   Table,
 };
 
-export function CustomMDX(props: MDXRemoteProps) {
+export function CustomMDX(props: MDXRemoteProps & { slug?: string }) {
+  const { slug, ...mdxProps } = props;
+
+  // slugを各コンポーネントに渡すためのラッパー関数
+  const componentsWithSlug = {
+    ...components,
+    img: (imgProps: ImageProps) => <RoundedImage {...imgProps} slug={slug} />,
+    Image: (imgProps: ImageProps) => <RoundedImage {...imgProps} slug={slug} />,
+  };
+
   return (
     <MDXRemote
-      {...props}
-      components={{ ...components, ...(props.components || {}) }}
+      {...mdxProps}
+      components={{ ...componentsWithSlug, ...(mdxProps.components || {}) }}
     />
   );
 }
