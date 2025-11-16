@@ -16,9 +16,11 @@ export default async function BlogPage() {
           >
             <div className="flex-1 p-2">
               <div className="mb-4">
-                <time className="text-gray-600 text-sm">{post.date}</time>
+                <time className="text-secondary-foreground text-sm">
+                  {post.date}
+                </time>
                 <Link href={`/blog/${post.slug}`}>
-                  <h2 className="text-xl font-bold hover:text-blue-600 tracking-wide">
+                  <h2 className="text-xl font-bold hover:text-primary tracking-wide">
                     {post.title}
                   </h2>
                 </Link>
@@ -26,7 +28,7 @@ export default async function BlogPage() {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-gray-600 text-xs bg-gray-100 px-2 py-1 rounded-full"
+                      className="text-secondary-foreground text-xs bg-secondary px-2 py-1 rounded-full"
                     >
                       {tag}
                     </span>
