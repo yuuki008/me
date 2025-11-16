@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/app/blog/utils";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { Button } from "@/components/ui/button";
 
 export default async function BlogPage() {

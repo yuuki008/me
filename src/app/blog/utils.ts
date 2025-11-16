@@ -4,7 +4,7 @@ import path from "path";
 import fs from "fs";
 import matter from "gray-matter";
 
-const directory = path.join(process.cwd(), "src", "app", "blog", "posts");
+const directory = path.join(process.cwd(), "public/posts");
 
 export interface Post {
   slug: string;

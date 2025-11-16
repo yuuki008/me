@@ -49,8 +49,9 @@ function RoundedImage(props: ImageProps & { slug?: string }) {
 
   // 相対パスの場合、投稿フォルダ内の画像として処理
   if (typeof src === "string" && src.startsWith("./") && props.slug) {
-    src = `/blog/posts/${props.slug}/${src.replace("./", "")}`;
+    src = `/posts/${props.slug}/${src.replace("./", "")}`;
   }
+  console.log(src);
 
   return <Image className="rounded-lg" {...props} src={src} alt={props.alt} />;
 }
