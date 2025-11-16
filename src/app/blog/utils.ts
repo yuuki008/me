@@ -26,7 +26,7 @@ function processThumbnailPath(thumbnailPath: string, slug: string): string {
     return thumbnailPath;
   }
   // 相対パスの場合、投稿フォルダ内の画像として処理
-  return `/blog/posts/${slug}/${thumbnailPath.replace("./", "")}`;
+  return `/posts/${slug}/${thumbnailPath.replace("./", "")}`;
 }
 
 // MDXファイルからPostオブジェクトを作成する共通関数
