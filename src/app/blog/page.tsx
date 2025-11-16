@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { getAllPosts } from "@/lib/posts";
+import { getAllPosts } from "@/app/blog/utils";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import { Button } from "@/components/ui/button";
 
-export default function BlogPage() {
-  const posts = getAllPosts();
+export default async function BlogPage() {
+  const posts = await getAllPosts();
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-8">
