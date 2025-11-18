@@ -1,6 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { BookOpen } from "lucide-react";
 
 export default function Page() {
   return (
@@ -22,19 +24,19 @@ export default function Page() {
             @yuuki008
           </a>
 
-          <div className="mt-4 text-sm">
-            福岡でデータ基盤と Web
-            サービスの開発・運用をしているエンジニアです。
+          <div className="mt-2 text-sm">
+            福岡でデータ基盤と Web サービスの開発・運用をしているエンジニア。
             <br />
-            休日は、ランニングや登山、トレーニング、読書をして過ごすことが多いです。シンプルで無駄のないものが大好きで、そういうものを追求していたいなと思っています。
+            ランニング、登山、トレーニング、読書、ヨガが好き。シンプルで心地よいものが好き。
             <br />
             <br />
-            最近ブログを書き始めました。
-            <Link className="text-blue-500" href="/blog">
-              こちら
-            </Link>
-            から気になる方は覗いてみてください。
           </div>
+          <Button asChild variant="secondary">
+            <Link href="/blog">
+              <BookOpen />
+              ブログを読む
+            </Link>
+          </Button>
         </div>
       </div>
     </div>
