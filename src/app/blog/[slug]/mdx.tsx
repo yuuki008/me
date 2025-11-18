@@ -51,7 +51,6 @@ function RoundedImage(props: ImageProps & { slug?: string }) {
   if (typeof src === "string" && src.startsWith("./") && props.slug) {
     src = `/posts/${props.slug}/${src.replace("./", "")}`;
   }
-  console.log(src);
 
   return <Image className="rounded-lg" {...props} src={src} alt={props.alt} />;
 }
