@@ -31,11 +31,9 @@ export default async function BlogPage() {
                   <time className="text-secondary-foreground text-sm">
                     {post.date}
                   </time>
-                  <Link href={`/blog/${post.slug}`}>
-                    <h2 className="text-xl font-bold hover:text-primary tracking-wide">
-                      {post.title}
-                    </h2>
-                  </Link>
+                  <h2 className="text-xl font-bold hover:text-primary tracking-wide">
+                    {post.title}
+                  </h2>
                   <div className="flex flex-wrap gap-2 mt-2">
                     {post.tags.map((tag) => (
                       <span
