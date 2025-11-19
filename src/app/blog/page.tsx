@@ -2,8 +2,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAllPosts } from "@/app/blog/utils";
 
-export default async function BlogPage() {
-  const posts = await getAllPosts();
+type Params = {
+  tag: string;
+};
+
+export default async function BlogPage({
+  params,
+}: {
+  params: Promise<Params>;
+}) {
+  const { tag } = await params;
+  const posts = await getAllPosts(tag);
 
   return (
     <div className="p-8">

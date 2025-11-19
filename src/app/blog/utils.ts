@@ -45,25 +45,22 @@ function createPostFromMDX(slug: string, filePath: string): Post {
   };
 }
 
-export async function getAllPosts(): Promise<Post[]> {
-  const items = fs.readdirSync(directory);
+export async function getAllPosts(tag?: string): Promise<Post[]> {
+  const slugs = fs.readdirSync(directory);
   const posts: Post[] = [];
 
-  for (const item of items) {
-    const itemPath = path.join(directory, item);
-    const stat = fs.statSync(itemPath);
+  for (const slug of slugs) {
+    const slugPath = path.join(directory, slug);
+    const stat = fs.statSync(slugPath);
 
-    if (stat.isDirectory()) {
-      // ディレクトリ内のindex.mdxファイルを処理
-      const indexPath = path.join(itemPath, "index.mdx");
-      if (fs.existsSync(indexPath)) {
-        posts.push(createPostFromMDX(item, indexPath));
-      }
-    } else if (stat.isFile() && item.endsWith(".mdx")) {
-      // 単体のMDXファイルを処理
-      const slug = item.replace(/\.mdx$/, "");
-      posts.push(createPostFromMDX(slug, itemPath));
-    }
+    const filePath = stat.isDirectory()
+      ? path.join(slugPath, "index.mdx")
+      : slugPath;
+
+    const post = createPostFromMDX(slug, filePath);
+    if (tag && !post.tags.includes(tag)) continue;
+
+    posts.push(post);
   }
 
   return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
