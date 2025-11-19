@@ -17,19 +17,18 @@ export default function Page() {
         />
         <div className="sm:py-6">
           <div className="text-4xl font-bold tracking-wide">能村 優希</div>
-          <a
-            href="https://github.com/yuuki008"
-            className="text-sm font-semibold"
-          >
-            @yuuki008
-          </a>
 
-          <div className="mt-2 text-sm">
+          <div className="mt-2 mb-4 text-sm">
             福岡でデータ基盤と Web サービスの開発・運用をしているエンジニア。
             <br />
-            ランニング、登山、トレーニング、読書、ヨガが好き。シンプルで心地よいものが好き。
+            <Link href="/blog?tag=ランニング">ランニング</Link>、
+            <Link href="/blog?tag=登山">登山</Link>、
+            <Link href="/blog?tag=トレーニング">トレーニング</Link>、
+            <Link href="/blog?tag=読書">読書</Link>、
+            <Link href="/blog?tag=ヨガ">ヨガ</Link>
+            が好き。
             <br />
-            <br />
+            シンプルで心地よいものが好き。
           </div>
           <Button asChild variant="secondary">
             <Link href="/blog">
