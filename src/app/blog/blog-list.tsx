@@ -28,7 +28,7 @@ export function BlogList({ posts }: { posts: Post[] }) {
                   height={1000}
                   src={post.thumbnail}
                   alt={post.title}
-                  className="object-cover max-h-96 w-full"
+                  className="object-cover max-h-96 w-auto mx-auto"
                 />
               </div>
             )}
