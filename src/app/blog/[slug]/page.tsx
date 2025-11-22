@@ -17,7 +17,7 @@ export default async function Blog({
 
   return (
     <section className="max-w-xl mx-auto px-4 py-8">
-      <h1 className="font-bold sm:text-5xl text-4xl text-center tracking-tight">
+      <h1 className="font-bold text-3xl text-center tracking-tight">
         {post.title}
       </h1>
       <time className="text-secondary-foreground flex justify-center text-neutral-500 dark:text-neutral-400 mt-2">
@@ -29,7 +29,7 @@ export default async function Blog({
           alt={post.title}
           width={1000}
           height={1000}
-          className="max-h-96 w-full object-cover mt-6"
+          className="max-h-96 w-auto mx-auto object-cover mt-6"
         />
       )}
 
