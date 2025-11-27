@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "./mdx";
 import { getPostBySlug } from "../utils";
-import Image from "next/image";
 
 export default async function Blog({
   params,
@@ -23,17 +22,17 @@ export default async function Blog({
       <time className="text-secondary-foreground flex justify-center text-neutral-500 dark:text-neutral-400 mt-2">
         {post.date}
       </time>
-      {post.thumbnail && (
-        <Image
-          src={post.thumbnail}
-          alt={post.title}
-          width={1000}
-          height={1000}
-          className="max-h-96 w-auto mx-auto object-cover mt-6"
-        />
-      )}
-
-      <article className="prose mt-8">
+      <div className="flex justify-end mb-2">
+        {post.tags.map((tag) => (
+          <span
+            key={tag}
+            className="text-secondary-foreground text-xs bg-secondary px-2 py-1 rounded-full"
+          >
+            # {tag}
+          </span>
+        ))}
+      </div>
+      <article className="prose">
         <CustomMDX source={post.content} slug={post.slug} />
       </article>
     </section>
