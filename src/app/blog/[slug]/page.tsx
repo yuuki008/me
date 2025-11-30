@@ -15,7 +15,7 @@ export default async function Blog({
   }
 
   return (
-    <section className="max-w-xl mx-auto px-4 py-8">
+    <section className="max-w-xl mx-auto px-4 py-10">
       <h1 className="font-bold text-3xl text-center tracking-wider">
         {post.title}
       </h1>
