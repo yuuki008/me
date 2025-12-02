@@ -1,5 +1,5 @@
 import { getAllPosts } from "@/app/blog/utils";
-import { BlogList } from "./blog-list2";
+import { BlogList } from "./blog-list";
 
 type Params = {
   tag: string;
