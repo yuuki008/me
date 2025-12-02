@@ -151,7 +151,7 @@
 @layer components {
   .prose {
     color: var(--primary-foreground);
-    font-size: var(--text-base);
+    font-size: var(--text-sm);
     max-width: 65ch;
     line-height: 1.7;
   }
