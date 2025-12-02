@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "能村 優希",
+  title: "Noumura Yuuki",
   description: "",
   icons: {
     icon: "/profile.jpeg",
