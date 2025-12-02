@@ -21,12 +21,7 @@ export default function Page() {
           <div className="mt-2 mb-4 text-sm">
             福岡でデータ基盤と Web サービスの開発・運用をしているエンジニア。
             <br />
-            <Link href="/blog?tag=ランニング">ランニング</Link>、
-            <Link href="/blog?tag=登山">登山</Link>、
-            <Link href="/blog?tag=トレーニング">トレーニング</Link>、
-            <Link href="/blog?tag=読書">読書</Link>、
-            <Link href="/blog?tag=ヨガ">ヨガ</Link>
-            が好き。
+            ランニング、登山、トレーニング、読書、ヨガが好き。
             <br />
             シンプルで心地よいものが好き。
           </div>
