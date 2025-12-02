@@ -4,7 +4,7 @@ export default function Page() {
   const sites = [
     { url: "https://leonbubova.github.io/", title: 'leonbubova.github.io' },
     { url: "http://bettermotherfuckingwebsite.com/", title: "bettermotherfuckingwebsite.com" },
-    { url: "https://blog.codinghorror.com/", title: "blog.codinghorror.com" }
+    { url: "https://blog.codinghorror.com/", title: "blog.codinghorror.com" },
     { url: "https://kentbeck.com/", title: "kentbeck.com" }
   ]
 
