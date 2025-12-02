@@ -1,36 +1,34 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { BookOpen } from "lucide-react";
 
 export default function Page() {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div className="max-w-2xl mx-auto px-4 flex sm:gap-8 gap-4 sm:flex-row flex-col">
+      <div className="max-w-xl mx-auto gap-4">
         <Image
-          className="rounded-full w-[120px] h-[120px] object-cover border-4"
+          className="rounded-full w-[120px] h-[120px] object-cover"
           src="/childhood02.jpg"
           alt="profile"
           width={1000}
           height={1000}
         />
-        <div className="sm:py-6">
+        <div className="mt-6">
           <div className="text-4xl font-bold tracking-wide">能村 優希</div>
 
-          <div className="mt-2 mb-4 text-sm">
-            福岡でデータ基盤と Web サービスの開発・運用をしているエンジニア。
+          <div className="mt-4 text-sm">
+            こんにちは。福岡でエンジニアをしています。
             <br />
-            ランニング、登山、トレーニング、読書、ヨガが好き。
+            データ基盤とか Web サービスを作って運用する仕事をしてます。
             <br />
-            シンプルで心地よいものが好き。
+            <br />
+            体を動かすのが好きで、ランニングや登山、トレーニング、ヨガなんかをよくやっています。
+            <br />
+            シンプルで心地よいものに惹かれます。
+            <br />
+            <br />
+            ブログは<Link className="text-blue-500" href="/blog">こちら</Link>からどうぞ。
           </div>
-          <Button asChild variant="secondary">
-            <Link href="/blog">
-              <BookOpen />
-              ブログを読む
-            </Link>
-          </Button>
         </div>
       </div>
     </div>
