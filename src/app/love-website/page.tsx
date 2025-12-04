@@ -6,7 +6,8 @@ export default function Page() {
     { url: "http://bettermotherfuckingwebsite.com/", title: "bettermotherfuckingwebsite.com" },
     { url: "https://blog.codinghorror.com/", title: "blog.codinghorror.com" },
     { url: "https://kentbeck.com/", title: "kentbeck.com" },
-    { url: "https://www.yamatomichi.com/", title: "yamatomichi.com" }
+    { url: "https://www.yamatomichi.com/", title: "yamatomichi.com" },
+    { url: "https://deadsimplesites.com/", title: "deadsimplesites.com" }
   ]
 
   return (
