@@ -42,8 +42,8 @@ function Page() {
 
 
   return (
-    <div className="max-w-lg px-6 mx-auto h-screen flex flex-col justify-center items-center">
-      <div className="text-5xl font-bold mb-14 tracking-wide">私のサブスク</div>
+    <div className="p-6 max-w-lg">
+      <div className="text-5xl font-bold mb-8 tracking-tight">Subscription</div>
 
       <div className="w-full">
         {subscriptions.map((sub, index) => (

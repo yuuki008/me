@@ -11,9 +11,9 @@ export default function Page() {
   ]
 
   return (
-    <div className="max-w-lg px-6 mx-auto h-screen flex flex-col justify-center items-center">
+    <div className="max-w-lg p-6">
       <div className="text-5xl font-bold tracking-tight mb-8">Love Website</div>
-      <div className="space-y-4">
+      <div className="space-y-2">
         {sites.map(site => <Link target="_blank" className="block text-lg text-blue-600 hover:underline" key={site.url} href={site.url}>{site.title}</Link>)}
       </div>
     </div>
