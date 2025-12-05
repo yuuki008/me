@@ -3,10 +3,10 @@ import { CustomMDX } from "./[slug]/mdx";
 
 export function BlogList({ posts }: { posts: Post[] }) {
   return (
-    <div className="divide-y py-14 max-w-lg mx-auto">
+    <div className="divide-y max-w-lg mx-auto">
       {posts.map((post) => (
-        <div className="py-10" key={post.slug}>
-          <div className="text-xl tracking-wide font-bold">{post.title}</div>
+        <div className="py-16" key={post.slug}>
+          <div className="text-xl tracking-wide font-bold line-clamp-1">{post.title}</div>
           <time className="text-gray-500 text-sm pt-2">{post.date}</time>
 
           <article className="prose mt-4">
