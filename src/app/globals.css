@@ -200,7 +200,7 @@
   }
 
   .prose ul li + li:where(:not(.not-prose, .not-prose *)) {
-    margin-top: calc(var(--spacing) * 2);
+    margin-top: var(--spacing);
   }
 
   .prose ul li:where(:not(.not-prose, .not-prose *))::marker {
@@ -211,10 +211,19 @@
     a:not(:where(:is(h1, h2, h3, h4, h5, h6) *)):where(
       :not(.not-prose, .not-prose *)
     ) {
-    color: var(--prose-link-color);
     font-weight: var(--font-weight-normal);
-    text-decoration: none;
+    text-decoration: underline;
   }
+
+  .prose
+    a:not(:where(:is(h1, h2, h3, h4, h5, h6) *)):where(
+      :not(.not-prose, .not-prose *)
+    ):hover {
+      opacity: 0.8;
+    }
+
+
+
 
   .prose strong:where(:not(.not-prose, .not-prose *)) {
     color: var(--prose-strong-color);
