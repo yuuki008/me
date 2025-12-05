@@ -15,7 +15,7 @@ export default function Page() {
           <br />
           シンプルで心地がよいもの好きです。
           <br />
-          ブログは<Link className="text-blue-500" href="/blog">こちら</Link>からどうぞ。
+          ブログは<Link className="text-blue-500" href="/blog">こちら</Link>から。
         </div>
       </div>
     </div>
